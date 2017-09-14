@@ -6,7 +6,8 @@ class Contact <MailForm::Base
 	attribute :nickname,    :validate=> true
 	# to prevent spam
 
-	def headers{
+	def headers
+	{
 		:subject => "Contact Form Portifolio",
 		:to => "doverheld@gmail.com",
 		:from => %("#{name}" <#{email}>)
