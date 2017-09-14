@@ -78,7 +78,7 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-offset-2 col-md-8">
-    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">I make apps make<span>great things</span>for us</h1>
+    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">I make apps make <span> great things </span></h1>
     					<div class="element">
                             <div class="sub-element">Hello, this is Dover</div>
                             <div class="sub-element">Check out some of my work</div>
@@ -313,27 +313,22 @@
     				</div>
     				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
     					<%= form_for @contact, url:contact_welcome_index_path  do |f| %>
-                        	<label><% f.label :name %></label>
-    						<%= f.text_field :name, required: true%>
-                            <!-- <input name="fullname" type="text" class="form-control" id="fullname"> -->
-   						  	
-                        <!--     <label>EMAIL</label>
-    					<!-- 
-                         <input name="email" type="email" class="form-control" id="email">
-   						 -->  	<label><% f.label :email %></label>
-                            <%= f.email_field :email, required: true%>
+                        	<label>NAME</label>
+    						
+                            <input name="fullname" type="text" class="form-control" id="fullname" <%= f.text_field :name, required: true%>>
+   							
+                        <label>EMAIL</label>
+                         <input name="email" type="email" class="form-control" id="email"
+                          <%= f.email_field :email, required: true%>>
+   						  
+                        <label>MESSAGE</label>
+    						<textarea name="message" rows="4" class="form-control" id="message"<%= f.text_area :message, required: true%>></textarea>
+    					                      
                             
-
-                         <!--    <label>MESSAGE</label>
-    						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
-    					 -->	<label>
-                         <% f.label :message %></label>
-                            <%= f.text_area :message, required: true%>
-                            <%= f.submit 'SEND MESSAGE', class: "button"%>
+                            <%= f.submit 'SEND MESSAGE', class: "form-control"%>
                             <% end %>
-                            <
-                            !--  <input type="submit" class="form-control">
-                         -->
+                           
+                       
     					<!-- </form> -->
     				</div>
     				<div class="col-md-6 consecteturl-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
