@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
- 	resources :welcome do
-  	post :contact, on: :collection
-  	end
+
+match '/contacts',     to: 'contacts#new',             via: 'get'
+resources "contacts", only: [:new, :create]
+
   get 'welcome/index'
   root 'welcome#index'
 end

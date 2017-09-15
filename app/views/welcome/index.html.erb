@@ -312,7 +312,7 @@
     					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>ME</span></h2>
     				</div>
     				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
-    					<%= form_for @contact, url:contact_welcome_index_path  do |f| %>
+    					<%= form_for @contact do |f| %>
                         	<label>NAME</label>
     						
                             <%= f.text_field :name, class:"form-control", required: true%>
@@ -323,6 +323,9 @@
                         <label>MESSAGE</label>
     					<%= f.text_area :message,rows:"4", class:"form-control", required: true%>
     					                      
+                    <div class= "hidden">
+                            <%= f.text_field     :nickname, :hint => 'Leave this field blank!' %>
+                    </div>   
                             
                             <%= f.submit 'SEND MESSAGE', class: "form-control"%>
                             <% end %>
