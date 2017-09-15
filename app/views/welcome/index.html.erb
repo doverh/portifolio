@@ -14,7 +14,7 @@
 	<body id="top">
 
 		<!-- start preloader -->
-	<!-- 	<div class="preloader">
+ 	<div class="preloader">
 			<div class="sk-spinner sk-spinner-wave">
      	 		<div class="sk-rect1"></div>
        			<div class="sk-rect2"></div>
@@ -22,7 +22,7 @@
       	 		<div class="sk-rect4"></div>
       			<div class="sk-rect5"></div>
      		</div>
-    	</div> -->
+    	</div> 
     	<!-- end preloader -->
 
         <!-- start header -->
@@ -38,9 +38,9 @@
                     <div class="col-md-5 col-sm-4 col-xs-12">
                         <ul class="social-icon">
                             <li><span>Find me on</span></li>
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="https://github.com/doverh" class="fa fa-github"></a></li>
+                            <li><a href="https://www.linkedin.com/in/dover-hellfeldt/" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/doverhell" class="fa fa-facebook"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,13 +78,13 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-offset-2 col-md-8">
-    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">I make apps make <span> great things </span></h1>
+    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">I build web apps to help people to <span> achieve great things </span></h1>
     					<div class="element">
                             <div class="sub-element">Hello, this is Dover</div>
-                            <div class="sub-element">Check out some of my work</div>
+                            <div class="sub-element">Check some of my work</div>
                             <div class="sub-element">Let's get in touch. Together we can make awesome things.</div>
                         </div>
-    					<a data-scroll href="#about" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">LEARN MORE</a>
+    					<a data-scroll href="#about" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">ABOUT ME</a>
     				</div>
     			</div>
     		</div>
@@ -96,7 +96,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">I AM <span>DOVER</span></h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">HI, I AM <span>DOVER</span></h2>
     				</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
 						<div class="media">
@@ -241,11 +241,11 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="../assets/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+                           <img src="../assets/ttt.gif" class="img-responsive" alt="tic tac toe">
                                 <div class="portfolio-overlay">
-                                    <h4>Food app</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Tic-Tac-Toe</h4>
+                                    <p>Tic-Tac-Toe is a original paper and pencil game for 2 players, X and O. This game was developed as part of my web developer bootcamp in 2017.</p>
+                                    <a href="https://playtictactoegame.herokuapp.com/" class="btn btn-default">PLAY NOW</a>
                                 </div>
                         </div>
                     </div>
@@ -315,14 +315,13 @@
     					<%= form_for @contact, url:contact_welcome_index_path  do |f| %>
                         	<label>NAME</label>
     						
-                            <input name="fullname" type="text" class="form-control" id="fullname" <%= f.text_field :name, required: true%>>
-   							
+                            <%= f.text_field :name, class:"form-control", required: true%>
+                        			
                         <label>EMAIL</label>
-                         <input name="email" type="email" class="form-control" id="email"
-                          <%= f.email_field :email, required: true%>>
+                        <%= f.email_field :email, class:"form-control", required: true%>
    						  
                         <label>MESSAGE</label>
-    						<textarea name="message" rows="4" class="form-control" id="message"<%= f.text_area :message, required: true%>></textarea>
+    					<%= f.text_area :message,rows:"4", class:"form-control", required: true%>
     					                      
                             
                             <%= f.submit 'SEND MESSAGE', class: "form-control"%>
@@ -334,16 +333,16 @@
     				<div class="col-md-6 consecteturl-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
     					<address>
     						<p class="address-title">MY ADDRESS</p>
-    						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</span>
-    						<p><i class="fa fa-phone"></i> 010-020-0340</p>
-    						<p><i class="fa fa-envelope-o"></i> awesome@company.com</p>
-    						<p><i class="fa fa-map-marker"></i> 663 New Walk Roadside, Birdeye View, GO 11020</p>
+    						<span></span>
+    						<p><i class="fa fa-phone"></i> 412-708-0508</p>
+    						<p><i class="fa fa-envelope-o"></i> doverheld@gmail.com</p>
+    						<p><i class="fa fa-map-marker"></i> Highland Park, Pittsburgh, PA</p>
     					</address>
     					<ul class="social-icon">
     						<li><h4>GET CONNECTED</h4></li>
-    						<li><a href="#" class="fa fa-facebook"></a></li>
-    						<li><a href="#" class="fa fa-twitter"></a></li>
-    						<li><a href="#" class="fa fa-instagram"></a></li>
+    						<li><a href="https://github.com/doverh" class="fa fa-github"></a></li>
+                            <li><a href="https://www.linkedin.com/in/dover-hellfeldt/" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/doverhell" class="fa fa-facebook"></a></li>
     					</ul>
     				</div>
     			</div>
