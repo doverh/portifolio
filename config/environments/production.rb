@@ -91,6 +91,7 @@ config.action_mailer.default_url_options = { host: 'https://iamdover.herokuapp.c
   :enable_starttls_auto => true  
 }
 
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
