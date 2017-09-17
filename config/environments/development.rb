@@ -28,7 +28,17 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-  
+ 
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :user_name => "app76944888@heroku.com",
+    :password => "n1lk1lgw9900",
+    :domain =>'heroku.com'
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
 
   
   config.action_mailer.default_url_options = { host:"localhost:3000"}
