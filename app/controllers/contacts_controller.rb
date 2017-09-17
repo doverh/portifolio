@@ -8,7 +8,8 @@ end
 def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
-    if @contact.deliver
+    if @contact.save
+       UserMailer.new_contact(@contact).deliver		
       flash.now[:success] = 'Thank you for your message. We will contact you soon!'
     else
       flash.now[:error] = 'Cannot send message.'

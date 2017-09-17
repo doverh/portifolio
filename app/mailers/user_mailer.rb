@@ -1,8 +1,9 @@
 class UserMailer < ApplicationMailer
 layout 'new_user'
 
-def new_user
-    mail(:to => "doverheld@gmail.com", :subject => "Welcome to doverheld@gmail.com")
+def new_contact(contact)
+    @contact = contact
+    mail(:to => "doverheld@gmail.com", :subject => @contact.message)
 end
 
 end
