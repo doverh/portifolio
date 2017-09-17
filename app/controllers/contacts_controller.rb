@@ -1,19 +1,17 @@
 class ContactsController < ApplicationController
 
-def new
-		@contact = Contact.new
-end
-
-
+def new 
+ @contact = Contact.new
+ end
 def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.save
-       UserMailer.new_contact(@contact).deliver		
-      flash.now[:success] = 'Thank you for your message. We will contact you soon!'
-    else
-      flash.now[:error] = 'Cannot send message.'
-      render :new
-    end
-  end
+ @contact = Contact.new(params[:contact])
+ @contact.request = request
+ if @contact.deliver
+ flash.now[:error] = nil
+ redirect_to root_path, notice: 'Message sent successfully'
+ else
+ flash.now[:error] = 'Cannot send message'
+ render :new
+ end
+ end
 end
