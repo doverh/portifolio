@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 def create
+	logger.info request.env
     @contact = Contact.new 
 if @contact.valid?
       MessageMailer.contact(@contact).deliver_now
