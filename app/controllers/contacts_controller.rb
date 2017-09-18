@@ -16,6 +16,6 @@ if @contact.valid?
 
 private
 def contact_params
-    params.require(:message).permit(:name, :email)
+    params.require(:contact).permit(:name, :email, :message)
   end
 end
