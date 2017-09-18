@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 def create
-    @contact = Contact.new contact_params
+    @contact = Contact.new 
 if @contact.valid?
       MessageMailer.contact(@contact).deliver_now
       redirect_to root_path
