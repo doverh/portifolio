@@ -13,4 +13,5 @@
  *= require_self
  *= require_tree .
  */
+ @import main;
 <%= stylesheet_link_tag    "application", :media => "all" %>
